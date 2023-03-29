@@ -30,7 +30,7 @@ const Footer = () => {
             <p className="footer-heading">Get Connect With Me</p>
             <NavLink target='_blank' to='https://github.com/PramodK2807' ><i class="fa-brands fa-github"></i> Github</NavLink>
             <br />
-            <NavLink target='_blank' to='https://www.linkedin.com/in/pramodkushwaha-1a35ba153/' ><i class="fa-brands fa-linkedin"></i> LinkedIn</NavLink>
+            <NavLink target='_blank' to='https://www.linkedin.com/in/pramod-kushwaha-1a35ba153/' ><i class="fa-brands fa-linkedin"></i> LinkedIn</NavLink>
             <br />
             <NavLink target='_blank' to='https://pramodk2807.github.io/portfolio/' ><i class="fa-solid fa-globe"></i> Website</NavLink>
           </div>
