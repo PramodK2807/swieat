@@ -1,0 +1,31 @@
+.input-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-box label{
+    margin: 10px ;
+    margin-left: 0;
+}
+
+.loginbtn{
+    padding: 10px;
+    background-color: #192F60 ;
+    color: white;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px auto;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 5px !important;
+    outline: none;
+    border: solid 1px ;
+}

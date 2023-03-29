@@ -1,0 +1,41 @@
+
+
+
+[
+    {
+        "_id": "1",
+        "name": "Breakfast",
+        "content": "Start your day with exclusive breakfast options",
+        "image": "../images/shutterstock_305270834@2x.png"
+    },
+    {
+        "_id": "2",
+        "name": "Lunch",
+        "content": "Get healthy Lunch options",
+        "image": "../images/shutterstock_1130181932@2x.png"
+    },
+    {
+        "_id": "3",
+        "name": "Dinner",
+        "content": "Eat, Eat, Eat & Repeat",
+        "image": "../images/shutterstock_476864884@2x.png"
+    },
+    {
+        "_id": "4",
+        "name": "Snacks",
+        "content": "Eat Snacks at anytime, anywhere",
+        "image": "../images/shutterstock_351721442@2x.png"
+    },
+    {
+        "_id": "5",
+        "name": "Drinks",
+        "content": "Try some softdrinks in weekend",
+        "image": "../images/shutterstock_305270834@2x.png"
+    },
+    {
+        "_id": "6",
+        "name": "NightLife",
+        "content": "Enjoy Night Life with friends",
+        "image": "../images/shutterstock_1304064250@2x.png"
+    }
+]

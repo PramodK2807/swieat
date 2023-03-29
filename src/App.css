@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navcoloronscroll{
+  background-color: #39082a  !important;
+  transition: all 0.5s ease-in-out;
+}
+
+.navigation {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  background-color: #000000a7 !important;
+  /* background: url("./images/shutterstock_348320018@2x.png"); */
+  /* object-fit: contain; */
+  background: linear-gradient(rgba(0, 0, 0, 0.317), rgba(0, 0, 0, 0.628)),
+  url('./images/shutterstock_348320018@2x.png');
+  background-size:cover;
+  
+  
+}
+
+.head-img {
+  width: 100%;
+  height: 70vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.head-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+li a {
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+li a:hover{
+  color:#ecd803 ;
+}
+
+.btn {
+
+  border: solid 2px white;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #EB2929;
+
+}
+
+.btn a:hover {
+  color: #ffffff;
+}
+
+.option select{
+  padding: 10px 25px;
+}
+
+
+nav {
+  display: flex;
+  margin: auto;
+  height: 70px;
+  /* align-items: center; */
+  padding-top: 15px;
+  justify-content: space-around;
+  /* background-color: #00000086 ; */
+  
+}
+
+.addtocart{
+  background-color: rgb(11 108 76);
+}
+
+a{
+  color: black;
+}
+
+.logo a{
+  font-size: 35px;
+}
+
+.head-cont{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+}
+
+.head-cont .header{
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 35px;
+  line-height: 1.5;
+}
+
+.head-cont input{
+  width: 100%;
+  padding: 8px 20px;
+  margin: 10px auto;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+/* p{
+  padding: 0;
+  margin: 0;
+} */
+
+.content-header .heading{
+  font-size: 30px;
+  color: #192F60;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.menu-name{
+  color: #192F60;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.minus{
+  border-radius: 10px 0 0 10px;
+}
+.plus{
+  border-radius: 0 10px 10px 0;
+}
+
+.cartFuncBtn button{
+  padding: 4px 9px;
+  text-align: center;
+  outline: none;
+  border: none;
+  background-color: white;
+  
+}
+
+
+
+
+.meal-container{
+  box-shadow: 5px 5px 10px #7b7a7a80;
+}
+
+.RestMenuCard{
+  box-shadow: 0 0 20px rgba(0,0,0,.12);
+  /* padding: 10px 0; */
+}
+
+.quickSupport{
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 7px 30px 5px rgba(164, 162, 162, 0.884) inset;
+  padding: 15px 0;
+  /* margin-bottom: 10px !important; */
+}
+
+.fa-mobile{
+  letter-spacing: 3px;
+  /* font-weight: 400 !important; */
+  font-size: 13px;
+}
+
+
+.title{
+  font-weight: bold;
+  font-size: 18px;
+  color: #192F60;
+}
+
+.meal .meal-card{
+  box-shadow: 3px 3px 6px -5px rgba(0,0,0,0.5);
+}
+
+.meal .meal-card:hover{
+  transform: scale(1.03);
+  transition: all 0.2s ease-in-out;
+}
+
+.logo a{
+  background: -webkit-linear-gradient(#ecd803, #fd0059);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.594);
+}
+
+
+.meal-container button{
+  padding: 5px 10px;
+  border: solid 1px #192F60;
+  /* margin: 10px; */
+}
+
+.filter-btn{
+  display: flex;
+  align-items: start;
+  margin: 10px 0 10px 20px;
+  flex-direction: column;
+  font-size: 20px;
+  gap: 10px;
+}
+
+.filter-btn input{
+  margin-right:10px;
+}
+
+
+@media screen and (max-width:600px){
+  .meal-card p{
+    font-size: 14px ;
+    transition: all 0.3s;
+  }
+  .logo a{
+    font-size: 25px;
+    transition: all 0.3s;
+  }
+
+  li a{
+    font-size: 14px ;
+    transition: all 0.3s;
+  }
+
+
+  
+}
+
+@media screen and (max-width:650px){
+  .content-header .mealRest{
+    font-size: 19px;
+    transition: all 0.3s;
+  }
+}
+
+@media screen and (max-width:7680px){
+  .meal-container img{
+    height: 220px !important;
+  }
+}
+
+@media screen and (min-width:768px){
+  .cartItem-img img{
+    width: 130px !important;
+    height: 130px !important;
+  }
+}
+@media screen and (max-width:576px){
+  .meal-card{
+    max-width: 90%;
+    margin: 10px auto;
+
+  }
+  .head-cont .header{
+    font-size: 25px;
+  }
+
+  .head-cont{
+    width: 70% !important;
+  }
+
+  .cartItem-img img{
+    width: 150px;
+    height: 100px;
+  }
+}
+
+
+footer{
+  color: white !important;
+}
+
+footer .p-color{
+  color: #69696a !important;
+  text-align: justify;
+}
+
+.footer-heading{
+  font-size: 18px;
+  /* border-bottom: 2px solid #69696a; */
+  text-decoration: underline;
+  
+}
+footer i, footer a{
+  margin: 10px 0 !important;
+  color: #69696a !important;
+  font-size: 20px;
+}
+
+ footer a:hover{
+  color: white  !important;
+}
