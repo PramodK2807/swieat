@@ -6,16 +6,13 @@ import { useCart } from "../Context/CartContext";
 import Nav from "../Layout/Nav";
 
 const Cart = () => {
-  // const [cart, setCart] = useCart();
-  // const [qty, setQty] = useState(1)
+
     const [auth, setAuth] = useAuth()
     const [cart, setCart ] = useCart()
-    const [qty, setQty] = useState(1);
     const [total, setTotal] = useState()
     const [payable, setPayable] = useState()
     const [ delivery, setDelivery ] = useState(40)
-    const navigate = useNavigate()
-    const location = useLocation()
+    const [ qty, setQty ] = useState(1)
 
   const handleDelete = (deleteId) => {
     // console.log(item._id);
@@ -35,24 +32,53 @@ const Cart = () => {
 
 
   const totalPrice = () => {
-    let cartPrice = 0 
+    var cartPrice = 0 
     cart.map((item) => {
-      cartPrice = item.menu_price + cartPrice
+      cartPrice = item.menu_price*item.qty + cartPrice
       // console.log(cartPrice);
-    },0)
+    })
 
     setTotal(cartPrice)
 
-    let totalPay = total > 399 ? `${total}` : cartPrice+delivery
+    let totalPay = total > 399 ? `${total}` : cartPrice + delivery
     // console.log(totalPay);
     setPayable(totalPay)
+  }
+
+
+  const increment = (items) => {
+    cart.map((item) => {
+      if(item._id === items._id){
+        item.qty = item.qty + 1
+        setQty(item.qty)
+      }
+    })
+    setCart(cart)
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }
+
+  const decrement = (items) => {
+    cart.map((item) => {
+      if(item._id === items._id ){
+        if(item.qty === 1){
+          alert("Minimum quantity selected")
+        }
+        else{
+          item.qty -= 1
+          setQty(item.qty)
+        }
+      }
+      setCart(cart)
+    })
+    localStorage.setItem('cart', JSON.stringify(cart))
   }
 
   
 
   useEffect(() => {
     totalPrice()
-  }, [total, payable, delivery, cart])
+
+  }, [total, payable, delivery, cart, qty, increment, decrement])
 
 
 
@@ -101,26 +127,32 @@ const Cart = () => {
                         <div className=" total-price">
                               Total : ₹ {cartItems.menu_price  }
                         </div>
-                        <div className="col-2 mt-2">
+                        
+                        <div className="row align-items-center justify-content-between mx-0 my-2">
+                        
+
+                          <div className="col-10 p-0">
+                            <div className="cartFuncBtn">
+                              <button onClick={() => decrement(cartItems)} className="minus"><i class="fa-solid fa-minus"></i></button>
+                              <button>{cartItems.qty}</button>
+                              <button onClick={() => increment(cartItems)} className="plus"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                          </div>
+
+                          <div className="col-2 mt-2">
                           <i onClick={() => handleDelete(cartItems)} class="fa-solid fa-trash-can" style={{cursor:"pointer", fontSize:'22px', color:"red"}}></i>
                         </div>
+                          
+
+
+                        </div>
+
                       </div>
                     </div>
                     <div className="col-4 pb-2 cartItem-img" >
                       <img style={{width:"100%",borderRadius:"8px" }} src={cartItems.menu_image} alt="" />
                         
                     </div>
-
-                    <div className="row align-items-center justify-content-between mb-2">
-                          <div className="col-10">
-                            {/* <div className="cartFuncBtn">
-                              <button className="minus"><i class="fa-solid fa-minus"></i></button>
-                              <button>{cartItems.qty}</button>
-                              <button onClick={() => increment(cartItems)} className="plus"><i class="fa-solid fa-plus"></i></button>
-                            </div> */}
-                          </div>
-                          
-                        </div>
                     <hr  />
                   </div>
                   
@@ -151,7 +183,7 @@ const Cart = () => {
                     
                     <div className="row justify-content-between my-3" style={{fontSize:'15px', color:"green"}}>
                         <div className="col-8">Delivery Charges</div>
-                        <div className="col-4">{cart.length > 0 ? payable > 399 ? "Free" : '₹ 40' : 0 }</div>
+                        <div className="col-4">{cart.length > 0 ? total > 399 ? "Free" : '₹ 40' : 0 }</div>
                     </div>
                     <hr />
 

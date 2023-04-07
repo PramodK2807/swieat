@@ -127,10 +127,7 @@ a{
   border-radius: 5px;
 }
 
-/* p{
-  padding: 0;
-  margin: 0;
-} */
+
 
 .content-header .heading{
   font-size: 30px;
@@ -159,10 +156,12 @@ a{
   padding: 4px 9px;
   text-align: center;
   outline: none;
-  border: none;
-  background-color: white;
+  border:transparent;
+  background-color: transparent;
+  color: rgb(0, 29, 158);
   
 }
+
 
 
 
