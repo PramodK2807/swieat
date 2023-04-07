@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import { toast } from "react-toastify"
 import { useCart } from "../Context/CartContext"
 import Layout from "../Layout/Layout"
+import Loader from "../components/Loader"
 
 const RestMenu = () => {
 
@@ -45,7 +46,7 @@ const RestMenu = () => {
         
         <div className="row g-3 mt-2 justify-content-between" >
             {
-                menu.length > 0 &&
+                menu.length > 0 ? (
                 menu.map((menuItem, i) => {
                     return(
                         <div className="col-md-6 p-3 RestMenuCard " key={i}>
@@ -69,6 +70,11 @@ const RestMenu = () => {
                         </div>
                     )
                 })
+                )
+                :
+                (
+                    <Loader/>
+                )
             }
         </div>
         </div>

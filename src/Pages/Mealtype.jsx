@@ -91,34 +91,6 @@ const Mealtype = () => {
                   </div>
                 </div>
 
-                {/* <p className="menu-name d-flex ">Cuisine Filter</p>
-                <hr />
-                <div className="filter-btn" onChange={(e) => cuisineFilter(e)}>
-                  <label className="radio">
-                    <input type="radio" name="cuisine" value="" />
-                    All
-                  </label>
-                  <label className="radio">
-                    <input type="radio" name="cuisine" value="1" />
-                    North Indian
-                  </label>
-                  <label className="radio">
-                    <input type="radio" name="cuisine" value="2" />
-                    South Indian
-                  </label>
-                  <label className="radio">
-                    <input type="radio" name="cuisine" value="3" />
-                    Chinese
-                  </label>
-                  <label className="radio">
-                    <input type="radio" name="cuisine" value="4" />
-                    Fast Food
-                  </label>
-                  <label className="radio">
-                    <input type="radio" name="cuisine" value="5" />
-                    Street Food
-                  </label> */}
-                {/* </div> */}
               </div>
             </div>
           </div>

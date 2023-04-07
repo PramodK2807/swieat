@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import {NavLink} from 'react-router-dom'
+import Loader from "./Loader"
 const QuickSearch = () => {
 
     const [mealData, setMealData] = useState([])
@@ -32,7 +33,7 @@ const QuickSearch = () => {
             <div className="row g-4 meal">
                 
                 {
-                    mealData.length > 0 &&
+                    mealData.length > 0 ?
                     mealData.map((item, i) => {
                         return (
                             <NavLink key={i} to={`/mealtype/${item.mealtype_id}`} className="col-md-4 col-12 col-sm-6 meal-card">
@@ -51,6 +52,10 @@ const QuickSearch = () => {
                             </NavLink>
                         )
                     })
+
+                    :
+
+                    <Loader/>
                 }
                 
             </div>

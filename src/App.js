@@ -9,8 +9,13 @@ import Login from './Pages/Login';
 import Mealtype from './Pages/Mealtype';
 import Register from './Pages/Register';
 import RestMenu from './Pages/RestMenu';
+import Loader from './components/Loader';
 
 function App() {
+
+  window.onload = function() {
+    <Loader/>
+  }
   
   return (
     <Routes>

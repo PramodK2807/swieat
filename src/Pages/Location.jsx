@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { NavLink, useParams } from "react-router-dom"
 import Layout from "../Layout/Layout"
+import Loader from "../components/Loader"
 
 const Location = () => {
 
@@ -23,7 +24,8 @@ const Location = () => {
         <div className="container row mx-auto">
 
             {
-                restData.length > 0 &&
+                restData.length > 0 ?
+                (
                 restData.map((meal, i) => {
                     return (
                         <div key={i} className="col-12 meal-container gy-3 p-3" >
@@ -82,6 +84,13 @@ const Location = () => {
                         </div>
                     )
                 })
+                )
+                :
+                (
+                    <>
+                    <Loader/>
+                    </>
+                )
             }
 
         </div>
