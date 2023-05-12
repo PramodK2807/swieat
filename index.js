@@ -27,7 +27,7 @@ const { compare } = require('bcrypt');
 
 
 app.get('/', (req, res) => {
-    res.send("Hello SwiEat database")
+    res.send("Hi I am database")
 })
 
 app.get('/location', async (req, res) => {
