@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom"
 import Loader from "./Loader"
 
 const CommonMeal = (props) => {
+    // const [page, setPage] = useState(1)
     const [mealData, setMealData] = useState([])
     
 
@@ -21,7 +22,9 @@ const CommonMeal = (props) => {
             
             {
                 mealData.length > 0 ? (
-                    mealData.map((meal, i) => {
+                    mealData
+                    
+                    .map((meal, i) => {
                         return (
                             <div key={i} className="col-12 meal-container gy-3 p-3" >
                                 <div className="row align-items-center justify-content-between">
@@ -88,10 +91,25 @@ const CommonMeal = (props) => {
                 
             }
 
+            
+
         </div>
-            </div>
-        {/* </div> */}
+        </div>
+        {/* {
+        mealData.length > 0 &&
+        <div className="pagination d-flex justify-content-center">
+            <span>Prev</span>
+            {
+                [(mealData.length / 3 )].map((_, i) => {
+                    return <span key={i}> {i } </span>
+                })
+            }
+            
+            <span>Next</span>
+        </div>
+    } */}
     </div>
+    
   )
 }
 export default CommonMeal

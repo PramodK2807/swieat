@@ -5,6 +5,7 @@ import CommonMeal from "../components/CommonMeal";
 import Layout from "../Layout/Layout";
 
 const Mealtype = () => {
+  
   const [mealData, setMealData] = useState([]);
   const [filterData, setFilterData] = useState([]);
   const params = useParams();

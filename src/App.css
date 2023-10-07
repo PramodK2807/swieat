@@ -316,3 +316,14 @@ footer i, footer a{
  footer a:hover{
   color: white  !important;
 }
+
+.pagination{
+  margin: 25px auto;
+}
+
+.pagination span{
+  background-color: green;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+}
